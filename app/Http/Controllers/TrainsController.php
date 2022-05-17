@@ -14,7 +14,8 @@ class TrainsController extends Controller
      */
     public function index()
     {
-        return view('trains.index');
+        $trains = Trains::all();
+        return view('trains.index', ["trains" => $trains]);
     }
 
     /**
