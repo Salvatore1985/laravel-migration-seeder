@@ -26,6 +26,7 @@ class TrainsController extends Controller
      */
     public function show($id)
     {
-        //
+        $singleTrain= Trains::findOrFail($id);
+        return view('trains.show', ['train'=>$singleTrain]);
     }
 }
